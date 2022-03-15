@@ -8,9 +8,9 @@ r##"
  *
  * Code generated for Simulink model 'M2_POS_Control'.
  *
- * Model version                  : 1.900
+ * Model version                  : 1.1023
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Tue Aug 24 14:23:00 2021
+ * C/C++ source code generated on : Tue Mar 15 15:30:19 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -110,13 +110,13 @@ extern RT_MODEL_M2_POS_Control_T *const M2_POS_Control_M;
  * MATLAB hilite_system command to trace the generated code back
  * to the parent model.  For example,
  *
- * hilite_system('ims_Build5pt1e/M2_POS_Control')    - opens subsystem ims_Build5pt1e/M2_POS_Control
- * hilite_system('ims_Build5pt1e/M2_POS_Control/Kp') - opens and selects block Kp
+ * hilite_system('ims_Build5pt1f/M2_POS_Control')    - opens subsystem ims_Build5pt1f/M2_POS_Control
+ * hilite_system('ims_Build5pt1f/M2_POS_Control/Kp') - opens and selects block Kp
  *
  * Here is the system hierarchy for this model
  *
- * '<Root>' : 'ims_Build5pt1e'
- * '<S1>'   : 'ims_Build5pt1e/M2_POS_Control'
+ * '<Root>' : 'ims_Build5pt1f'
+ * '<S1>'   : 'ims_Build5pt1f/M2_POS_Control'
  */
 #endif                                 /* RTW_HEADER_M2_POS_Control_h_ */
 
