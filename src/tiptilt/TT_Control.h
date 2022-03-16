@@ -1,12 +1,11 @@
-#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
 /*
  * File: TT_Control.h
  *
  * Code generated for Simulink model 'TT_Control'.
  *
- * Model version                  : 1.901
+ * Model version                  : 1.1029
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Tue Aug 24 14:29:48 2021
+ * C/C++ source code generated on : Wed Mar 16 10:17:11 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -49,13 +48,13 @@ typedef struct {
 
 /* External inputs (root inport signals with default storage) */
 typedef struct {
-  real_T TT_SP;                        /* '<Root>/TT_SP' */
+  real_T TT_SP[14];                    /* '<Root>/TT_SP' */
   real_T TT_FB[14];                    /* '<Root>/TT_FB' */
 } ExtU_TT_Control_T;
 
 /* External outputs (root outports fed by signals with default storage) */
 typedef struct {
-  real_T TT_cmd[21];                   /* '<Root>/TT_cmd' */
+  real_T FSM_cmd[21];                  /* '<Root>/FSM_cmd' */
 } ExtY_TT_Control_T;
 
 /* Real-time Model Data Structure */
@@ -101,13 +100,13 @@ extern RT_MODEL_TT_Control_T *const TT_Control_M;
  * MATLAB hilite_system command to trace the generated code back
  * to the parent model.  For example,
  *
- * hilite_system('ims_Build5pt1e/TT_Control')    - opens subsystem ims_Build5pt1e/TT_Control
- * hilite_system('ims_Build5pt1e/TT_Control/Kp') - opens and selects block Kp
+ * hilite_system('ims_Build5pt1f/TT_Control')    - opens subsystem ims_Build5pt1f/TT_Control
+ * hilite_system('ims_Build5pt1f/TT_Control/Kp') - opens and selects block Kp
  *
  * Here is the system hierarchy for this model
  *
- * '<Root>' : 'ims_Build5pt1e'
- * '<S1>'   : 'ims_Build5pt1e/TT_Control'
+ * '<Root>' : 'ims_Build5pt1f'
+ * '<S1>'   : 'ims_Build5pt1f/TT_Control'
  */
 #endif                                 /* RTW_HEADER_TT_Control_h_ */
 

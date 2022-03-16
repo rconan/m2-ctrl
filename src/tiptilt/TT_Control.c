@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'TT_Control'.
  *
- * Model version                  : 1.901
+ * Model version                  : 1.1029
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Tue Aug 24 14:29:48 2021
+ * C/C++ source code generated on : Wed Mar 16 10:17:11 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -44,7 +44,7 @@ void TT_Control_step(void)
    *  Inport: '<Root>/TT_SP'
    */
   for (i = 0; i < 14; i++) {
-    rtb_Sum1[i] = TT_Control_U.TT_SP - TT_Control_U.TT_FB[i];
+    rtb_Sum1[i] = TT_Control_U.TT_SP[i] - TT_Control_U.TT_FB[i];
   }
 
   /* End of Sum: '<S1>/Sum1' */
@@ -81,20 +81,20 @@ void TT_Control_step(void)
     rtb_TTController[13] += (0.15)*rtb_Sum1[13];
   }
 
-  /* Outport: '<Root>/TT_cmd' incorporates:
+  /* Outport: '<Root>/FSM_cmd' incorporates:
    *  Gain: '<S1>/TT2PZT'
    */
   for (i = 0; i < 21; i++) {
-    TT_Control_Y.TT_cmd[i] = 0.0;
+    TT_Control_Y.FSM_cmd[i] = 0.0;
     tmp = 0;
     for (i_0 = 0; i_0 < 14; i_0++) {
-      TT_Control_Y.TT_cmd[i] += TT_Control_ConstP.TT2PZT_Gain[tmp + i] *
+      TT_Control_Y.FSM_cmd[i] += TT_Control_ConstP.TT2PZT_Gain[tmp + i] *
         rtb_TTController[i_0];
       tmp += 21;
     }
   }
 
-  /* End of Outport: '<Root>/TT_cmd' */
+  /* End of Outport: '<Root>/FSM_cmd' */
 
   /* Update for DiscreteStateSpace: '<S1>/TT Controller' */
   {
@@ -148,7 +148,7 @@ void TT_Control_initialize(void)
   (void)memset(&TT_Control_U, 0, sizeof(ExtU_TT_Control_T));
 
   /* external outputs */
-  (void) memset(&TT_Control_Y.TT_cmd[0], 0,
+  (void) memset(&TT_Control_Y.FSM_cmd[0], 0,
                 21U*sizeof(real_T));
 }
 
