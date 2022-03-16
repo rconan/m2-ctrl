@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'TT_Control'.
  *
- * Model version                  : 1.1032
+ * Model version                  : 1.1033
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Wed Mar 16 11:56:41 2022
+ * C/C++ source code generated on : Wed Mar 16 12:39:41 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -137,20 +137,20 @@ void TT_Control_step(void)
     rtb_TTController[13] += (0.65833125558212557)*rtb_Sum1[13];
   }
 
-  /* Outport: '<Root>/FZT_cmd' incorporates:
+  /* Outport: '<Root>/PZT_cmd' incorporates:
    *  Gain: '<S1>/TT2PZT'
    */
   for (i = 0; i < 21; i++) {
-    TT_Control_Y.FZT_cmd[i] = 0.0;
+    TT_Control_Y.PZT_cmd[i] = 0.0;
     tmp = 0;
     for (i_0 = 0; i_0 < 14; i_0++) {
-      TT_Control_Y.FZT_cmd[i] += TT_Control_ConstP.TT2PZT_Gain[tmp + i] *
+      TT_Control_Y.PZT_cmd[i] += TT_Control_ConstP.TT2PZT_Gain[tmp + i] *
         rtb_TTController[i_0];
       tmp += 21;
     }
   }
 
-  /* End of Outport: '<Root>/FZT_cmd' */
+  /* End of Outport: '<Root>/PZT_cmd' */
 
   /* Update for DiscreteStateSpace: '<S1>/TT Controller' */
   {
@@ -372,7 +372,7 @@ void TT_Control_initialize(void)
   (void)memset(&TT_Control_U, 0, sizeof(ExtU_TT_Control_T));
 
   /* external outputs */
-  (void) memset(&TT_Control_Y.FZT_cmd[0], 0,
+  (void) memset(&TT_Control_Y.PZT_cmd[0], 0,
                 21U*sizeof(real_T));
 }
 
