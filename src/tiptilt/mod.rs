@@ -8,9 +8,9 @@ r##"
  *
  * Code generated for Simulink model 'TT_Control'.
  *
- * Model version                  : 1.1029
+ * Model version                  : 1.1032
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Wed Mar 16 10:17:11 2022
+ * C/C++ source code generated on : Wed Mar 16 11:56:41 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -40,7 +40,7 @@ r##"
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
-  real_T TTController_DSTATE[14];      /* '<S1>/TT Controller' */
+  real_T TTController_DSTATE[56];      /* '<S1>/TT Controller' */
 } DW_TT_Control_T;
 
 /* Constant parameters (default storage) */
@@ -59,7 +59,7 @@ typedef struct {
 
 /* External outputs (root outports fed by signals with default storage) */
 typedef struct {
-  real_T FSM_cmd[21];                  /* '<Root>/FSM_cmd' */
+  real_T FZT_cmd[21];                  /* '<Root>/FZT_cmd' */
 } ExtY_TT_Control_T;
 
 /* Real-time Model Data Structure */

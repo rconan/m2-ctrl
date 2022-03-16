@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'TT_Control'.
  *
- * Model version                  : 1.1029
+ * Model version                  : 1.1032
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Wed Mar 16 10:17:11 2022
+ * C/C++ source code generated on : Wed Mar 16 11:56:41 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -51,84 +51,308 @@ void TT_Control_step(void)
 
   /* DiscreteStateSpace: '<S1>/TT Controller' */
   {
-    rtb_TTController[0] = (0.6)*TT_Control_DW.TTController_DSTATE[0];
-    rtb_TTController[0] += (0.15)*rtb_Sum1[0];
-    rtb_TTController[1] = (0.6)*TT_Control_DW.TTController_DSTATE[1];
-    rtb_TTController[1] += (0.15)*rtb_Sum1[1];
-    rtb_TTController[2] = (0.6)*TT_Control_DW.TTController_DSTATE[2];
-    rtb_TTController[2] += (0.15)*rtb_Sum1[2];
-    rtb_TTController[3] = (0.6)*TT_Control_DW.TTController_DSTATE[3];
-    rtb_TTController[3] += (0.15)*rtb_Sum1[3];
-    rtb_TTController[4] = (0.6)*TT_Control_DW.TTController_DSTATE[4];
-    rtb_TTController[4] += (0.15)*rtb_Sum1[4];
-    rtb_TTController[5] = (0.6)*TT_Control_DW.TTController_DSTATE[5];
-    rtb_TTController[5] += (0.15)*rtb_Sum1[5];
-    rtb_TTController[6] = (0.6)*TT_Control_DW.TTController_DSTATE[6];
-    rtb_TTController[6] += (0.15)*rtb_Sum1[6];
-    rtb_TTController[7] = (0.6)*TT_Control_DW.TTController_DSTATE[7];
-    rtb_TTController[7] += (0.15)*rtb_Sum1[7];
-    rtb_TTController[8] = (0.6)*TT_Control_DW.TTController_DSTATE[8];
-    rtb_TTController[8] += (0.15)*rtb_Sum1[8];
-    rtb_TTController[9] = (0.6)*TT_Control_DW.TTController_DSTATE[9];
-    rtb_TTController[9] += (0.15)*rtb_Sum1[9];
-    rtb_TTController[10] = (0.6)*TT_Control_DW.TTController_DSTATE[10];
-    rtb_TTController[10] += (0.15)*rtb_Sum1[10];
-    rtb_TTController[11] = (0.6)*TT_Control_DW.TTController_DSTATE[11];
-    rtb_TTController[11] += (0.15)*rtb_Sum1[11];
-    rtb_TTController[12] = (0.6)*TT_Control_DW.TTController_DSTATE[12];
-    rtb_TTController[12] += (0.15)*rtb_Sum1[12];
-    rtb_TTController[13] = (0.6)*TT_Control_DW.TTController_DSTATE[13];
-    rtb_TTController[13] += (0.15)*rtb_Sum1[13];
+    rtb_TTController[0] = (-0.2546795722605098)*
+      TT_Control_DW.TTController_DSTATE[0]
+      + (-1.1851139548453304)*TT_Control_DW.TTController_DSTATE[1]
+      + (0.29195349394567127)*TT_Control_DW.TTController_DSTATE[2]
+      + (0.27355876196418583)*TT_Control_DW.TTController_DSTATE[3];
+    rtb_TTController[0] += (0.65833125558212557)*rtb_Sum1[0];
+    rtb_TTController[1] = (-0.2546795722605098)*
+      TT_Control_DW.TTController_DSTATE[4]
+      + (-1.1851139548453304)*TT_Control_DW.TTController_DSTATE[5]
+      + (0.29195349394567127)*TT_Control_DW.TTController_DSTATE[6]
+      + (0.27355876196418583)*TT_Control_DW.TTController_DSTATE[7];
+    rtb_TTController[1] += (0.65833125558212557)*rtb_Sum1[1];
+    rtb_TTController[2] = (-0.2546795722605098)*
+      TT_Control_DW.TTController_DSTATE[8]
+      + (-1.1851139548453304)*TT_Control_DW.TTController_DSTATE[9]
+      + (0.29195349394567127)*TT_Control_DW.TTController_DSTATE[10]
+      + (0.27355876196418583)*TT_Control_DW.TTController_DSTATE[11];
+    rtb_TTController[2] += (0.65833125558212557)*rtb_Sum1[2];
+    rtb_TTController[3] = (-0.2546795722605098)*
+      TT_Control_DW.TTController_DSTATE[12]
+      + (-1.1851139548453304)*TT_Control_DW.TTController_DSTATE[13]
+      + (0.29195349394567127)*TT_Control_DW.TTController_DSTATE[14]
+      + (0.27355876196418583)*TT_Control_DW.TTController_DSTATE[15];
+    rtb_TTController[3] += (0.65833125558212557)*rtb_Sum1[3];
+    rtb_TTController[4] = (-0.2546795722605098)*
+      TT_Control_DW.TTController_DSTATE[16]
+      + (-1.1851139548453304)*TT_Control_DW.TTController_DSTATE[17]
+      + (0.29195349394567127)*TT_Control_DW.TTController_DSTATE[18]
+      + (0.27355876196418583)*TT_Control_DW.TTController_DSTATE[19];
+    rtb_TTController[4] += (0.65833125558212557)*rtb_Sum1[4];
+    rtb_TTController[5] = (-0.2546795722605098)*
+      TT_Control_DW.TTController_DSTATE[20]
+      + (-1.1851139548453304)*TT_Control_DW.TTController_DSTATE[21]
+      + (0.29195349394567127)*TT_Control_DW.TTController_DSTATE[22]
+      + (0.27355876196418583)*TT_Control_DW.TTController_DSTATE[23];
+    rtb_TTController[5] += (0.65833125558212557)*rtb_Sum1[5];
+    rtb_TTController[6] = (-0.2546795722605098)*
+      TT_Control_DW.TTController_DSTATE[24]
+      + (-1.1851139548453304)*TT_Control_DW.TTController_DSTATE[25]
+      + (0.29195349394567127)*TT_Control_DW.TTController_DSTATE[26]
+      + (0.27355876196418583)*TT_Control_DW.TTController_DSTATE[27];
+    rtb_TTController[6] += (0.65833125558212557)*rtb_Sum1[6];
+    rtb_TTController[7] = (-0.2546795722605098)*
+      TT_Control_DW.TTController_DSTATE[28]
+      + (-1.1851139548453304)*TT_Control_DW.TTController_DSTATE[29]
+      + (0.29195349394567127)*TT_Control_DW.TTController_DSTATE[30]
+      + (0.27355876196418583)*TT_Control_DW.TTController_DSTATE[31];
+    rtb_TTController[7] += (0.65833125558212557)*rtb_Sum1[7];
+    rtb_TTController[8] = (-0.2546795722605098)*
+      TT_Control_DW.TTController_DSTATE[32]
+      + (-1.1851139548453304)*TT_Control_DW.TTController_DSTATE[33]
+      + (0.29195349394567127)*TT_Control_DW.TTController_DSTATE[34]
+      + (0.27355876196418583)*TT_Control_DW.TTController_DSTATE[35];
+    rtb_TTController[8] += (0.65833125558212557)*rtb_Sum1[8];
+    rtb_TTController[9] = (-0.2546795722605098)*
+      TT_Control_DW.TTController_DSTATE[36]
+      + (-1.1851139548453304)*TT_Control_DW.TTController_DSTATE[37]
+      + (0.29195349394567127)*TT_Control_DW.TTController_DSTATE[38]
+      + (0.27355876196418583)*TT_Control_DW.TTController_DSTATE[39];
+    rtb_TTController[9] += (0.65833125558212557)*rtb_Sum1[9];
+    rtb_TTController[10] = (-0.2546795722605098)*
+      TT_Control_DW.TTController_DSTATE[40]
+      + (-1.1851139548453304)*TT_Control_DW.TTController_DSTATE[41]
+      + (0.29195349394567127)*TT_Control_DW.TTController_DSTATE[42]
+      + (0.27355876196418583)*TT_Control_DW.TTController_DSTATE[43];
+    rtb_TTController[10] += (0.65833125558212557)*rtb_Sum1[10];
+    rtb_TTController[11] = (-0.2546795722605098)*
+      TT_Control_DW.TTController_DSTATE[44]
+      + (-1.1851139548453304)*TT_Control_DW.TTController_DSTATE[45]
+      + (0.29195349394567127)*TT_Control_DW.TTController_DSTATE[46]
+      + (0.27355876196418583)*TT_Control_DW.TTController_DSTATE[47];
+    rtb_TTController[11] += (0.65833125558212557)*rtb_Sum1[11];
+    rtb_TTController[12] = (-0.2546795722605098)*
+      TT_Control_DW.TTController_DSTATE[48]
+      + (-1.1851139548453304)*TT_Control_DW.TTController_DSTATE[49]
+      + (0.29195349394567127)*TT_Control_DW.TTController_DSTATE[50]
+      + (0.27355876196418583)*TT_Control_DW.TTController_DSTATE[51];
+    rtb_TTController[12] += (0.65833125558212557)*rtb_Sum1[12];
+    rtb_TTController[13] = (-0.2546795722605098)*
+      TT_Control_DW.TTController_DSTATE[52]
+      + (-1.1851139548453304)*TT_Control_DW.TTController_DSTATE[53]
+      + (0.29195349394567127)*TT_Control_DW.TTController_DSTATE[54]
+      + (0.27355876196418583)*TT_Control_DW.TTController_DSTATE[55];
+    rtb_TTController[13] += (0.65833125558212557)*rtb_Sum1[13];
   }
 
-  /* Outport: '<Root>/FSM_cmd' incorporates:
+  /* Outport: '<Root>/FZT_cmd' incorporates:
    *  Gain: '<S1>/TT2PZT'
    */
   for (i = 0; i < 21; i++) {
-    TT_Control_Y.FSM_cmd[i] = 0.0;
+    TT_Control_Y.FZT_cmd[i] = 0.0;
     tmp = 0;
     for (i_0 = 0; i_0 < 14; i_0++) {
-      TT_Control_Y.FSM_cmd[i] += TT_Control_ConstP.TT2PZT_Gain[tmp + i] *
+      TT_Control_Y.FZT_cmd[i] += TT_Control_ConstP.TT2PZT_Gain[tmp + i] *
         rtb_TTController[i_0];
       tmp += 21;
     }
   }
 
-  /* End of Outport: '<Root>/FSM_cmd' */
+  /* End of Outport: '<Root>/FZT_cmd' */
 
   /* Update for DiscreteStateSpace: '<S1>/TT Controller' */
   {
-    real_T xnew[14];
-    xnew[0] = (1.0)*TT_Control_DW.TTController_DSTATE[0];
-    xnew[0] += (0.5)*rtb_Sum1[0];
-    xnew[1] = (1.0)*TT_Control_DW.TTController_DSTATE[1];
-    xnew[1] += (0.5)*rtb_Sum1[1];
-    xnew[2] = (1.0)*TT_Control_DW.TTController_DSTATE[2];
-    xnew[2] += (0.5)*rtb_Sum1[2];
-    xnew[3] = (1.0)*TT_Control_DW.TTController_DSTATE[3];
-    xnew[3] += (0.5)*rtb_Sum1[3];
-    xnew[4] = (1.0)*TT_Control_DW.TTController_DSTATE[4];
-    xnew[4] += (0.5)*rtb_Sum1[4];
-    xnew[5] = (1.0)*TT_Control_DW.TTController_DSTATE[5];
-    xnew[5] += (0.5)*rtb_Sum1[5];
-    xnew[6] = (1.0)*TT_Control_DW.TTController_DSTATE[6];
-    xnew[6] += (0.5)*rtb_Sum1[6];
-    xnew[7] = (1.0)*TT_Control_DW.TTController_DSTATE[7];
-    xnew[7] += (0.5)*rtb_Sum1[7];
-    xnew[8] = (1.0)*TT_Control_DW.TTController_DSTATE[8];
-    xnew[8] += (0.5)*rtb_Sum1[8];
-    xnew[9] = (1.0)*TT_Control_DW.TTController_DSTATE[9];
-    xnew[9] += (0.5)*rtb_Sum1[9];
-    xnew[10] = (1.0)*TT_Control_DW.TTController_DSTATE[10];
-    xnew[10] += (0.5)*rtb_Sum1[10];
-    xnew[11] = (1.0)*TT_Control_DW.TTController_DSTATE[11];
-    xnew[11] += (0.5)*rtb_Sum1[11];
-    xnew[12] = (1.0)*TT_Control_DW.TTController_DSTATE[12];
-    xnew[12] += (0.5)*rtb_Sum1[12];
-    xnew[13] = (1.0)*TT_Control_DW.TTController_DSTATE[13];
-    xnew[13] += (0.5)*rtb_Sum1[13];
+    real_T xnew[56];
+    xnew[0] = (1.0000000000000002)*TT_Control_DW.TTController_DSTATE[0];
+    xnew[0] += (-6.6619717846840878)*rtb_Sum1[0];
+    xnew[1] = (0.99529000600032735)*TT_Control_DW.TTController_DSTATE[1]
+      + (0.0023265423933003264)*TT_Control_DW.TTController_DSTATE[2]
+      + (0.0021799853932924335)*TT_Control_DW.TTController_DSTATE[3];
+    xnew[1] += (1.1851139548453302)*rtb_Sum1[0];
+    xnew[2] = (-0.0023265423933001412)*TT_Control_DW.TTController_DSTATE[1]
+      + (-0.37909734470795464)*TT_Control_DW.TTController_DSTATE[2]
+      + (0.58517838698532576)*TT_Control_DW.TTController_DSTATE[3];
+    xnew[2] += (0.29195349394530024)*rtb_Sum1[0];
+    xnew[3] = (0.0021799853932918663)*TT_Control_DW.TTController_DSTATE[1]
+      + (-0.58517838698421143)*TT_Control_DW.TTController_DSTATE[2]
+      + (0.44848270092026393)*TT_Control_DW.TTController_DSTATE[3];
+    xnew[3] += (-0.27355876196458428)*rtb_Sum1[0];
+    xnew[4] = (1.0000000000000002)*TT_Control_DW.TTController_DSTATE[4];
+    xnew[4] += (-6.6619717846840878)*rtb_Sum1[1];
+    xnew[5] = (0.99529000600032735)*TT_Control_DW.TTController_DSTATE[5]
+      + (0.0023265423933003264)*TT_Control_DW.TTController_DSTATE[6]
+      + (0.0021799853932924335)*TT_Control_DW.TTController_DSTATE[7];
+    xnew[5] += (1.1851139548453302)*rtb_Sum1[1];
+    xnew[6] = (-0.0023265423933001412)*TT_Control_DW.TTController_DSTATE[5]
+      + (-0.37909734470795464)*TT_Control_DW.TTController_DSTATE[6]
+      + (0.58517838698532576)*TT_Control_DW.TTController_DSTATE[7];
+    xnew[6] += (0.29195349394530024)*rtb_Sum1[1];
+    xnew[7] = (0.0021799853932918663)*TT_Control_DW.TTController_DSTATE[5]
+      + (-0.58517838698421143)*TT_Control_DW.TTController_DSTATE[6]
+      + (0.44848270092026393)*TT_Control_DW.TTController_DSTATE[7];
+    xnew[7] += (-0.27355876196458428)*rtb_Sum1[1];
+    xnew[8] = (1.0000000000000002)*TT_Control_DW.TTController_DSTATE[8];
+    xnew[8] += (-6.6619717846840878)*rtb_Sum1[2];
+    xnew[9] = (0.99529000600032735)*TT_Control_DW.TTController_DSTATE[9]
+      + (0.0023265423933003264)*TT_Control_DW.TTController_DSTATE[10]
+      + (0.0021799853932924335)*TT_Control_DW.TTController_DSTATE[11];
+    xnew[9] += (1.1851139548453302)*rtb_Sum1[2];
+    xnew[10] = (-0.0023265423933001412)*TT_Control_DW.TTController_DSTATE[9]
+      + (-0.37909734470795464)*TT_Control_DW.TTController_DSTATE[10]
+      + (0.58517838698532576)*TT_Control_DW.TTController_DSTATE[11];
+    xnew[10] += (0.29195349394530024)*rtb_Sum1[2];
+    xnew[11] = (0.0021799853932918663)*TT_Control_DW.TTController_DSTATE[9]
+      + (-0.58517838698421143)*TT_Control_DW.TTController_DSTATE[10]
+      + (0.44848270092026393)*TT_Control_DW.TTController_DSTATE[11];
+    xnew[11] += (-0.27355876196458428)*rtb_Sum1[2];
+    xnew[12] = (1.0000000000000002)*TT_Control_DW.TTController_DSTATE[12];
+    xnew[12] += (-6.6619717846840878)*rtb_Sum1[3];
+    xnew[13] = (0.99529000600032735)*TT_Control_DW.TTController_DSTATE[13]
+      + (0.0023265423933003264)*TT_Control_DW.TTController_DSTATE[14]
+      + (0.0021799853932924335)*TT_Control_DW.TTController_DSTATE[15];
+    xnew[13] += (1.1851139548453302)*rtb_Sum1[3];
+    xnew[14] = (-0.0023265423933001412)*TT_Control_DW.TTController_DSTATE[13]
+      + (-0.37909734470795464)*TT_Control_DW.TTController_DSTATE[14]
+      + (0.58517838698532576)*TT_Control_DW.TTController_DSTATE[15];
+    xnew[14] += (0.29195349394530024)*rtb_Sum1[3];
+    xnew[15] = (0.0021799853932918663)*TT_Control_DW.TTController_DSTATE[13]
+      + (-0.58517838698421143)*TT_Control_DW.TTController_DSTATE[14]
+      + (0.44848270092026393)*TT_Control_DW.TTController_DSTATE[15];
+    xnew[15] += (-0.27355876196458428)*rtb_Sum1[3];
+    xnew[16] = (1.0000000000000002)*TT_Control_DW.TTController_DSTATE[16];
+    xnew[16] += (-6.6619717846840878)*rtb_Sum1[4];
+    xnew[17] = (0.99529000600032735)*TT_Control_DW.TTController_DSTATE[17]
+      + (0.0023265423933003264)*TT_Control_DW.TTController_DSTATE[18]
+      + (0.0021799853932924335)*TT_Control_DW.TTController_DSTATE[19];
+    xnew[17] += (1.1851139548453302)*rtb_Sum1[4];
+    xnew[18] = (-0.0023265423933001412)*TT_Control_DW.TTController_DSTATE[17]
+      + (-0.37909734470795464)*TT_Control_DW.TTController_DSTATE[18]
+      + (0.58517838698532576)*TT_Control_DW.TTController_DSTATE[19];
+    xnew[18] += (0.29195349394530024)*rtb_Sum1[4];
+    xnew[19] = (0.0021799853932918663)*TT_Control_DW.TTController_DSTATE[17]
+      + (-0.58517838698421143)*TT_Control_DW.TTController_DSTATE[18]
+      + (0.44848270092026393)*TT_Control_DW.TTController_DSTATE[19];
+    xnew[19] += (-0.27355876196458428)*rtb_Sum1[4];
+    xnew[20] = (1.0000000000000002)*TT_Control_DW.TTController_DSTATE[20];
+    xnew[20] += (-6.6619717846840878)*rtb_Sum1[5];
+    xnew[21] = (0.99529000600032735)*TT_Control_DW.TTController_DSTATE[21]
+      + (0.0023265423933003264)*TT_Control_DW.TTController_DSTATE[22]
+      + (0.0021799853932924335)*TT_Control_DW.TTController_DSTATE[23];
+    xnew[21] += (1.1851139548453302)*rtb_Sum1[5];
+    xnew[22] = (-0.0023265423933001412)*TT_Control_DW.TTController_DSTATE[21]
+      + (-0.37909734470795464)*TT_Control_DW.TTController_DSTATE[22]
+      + (0.58517838698532576)*TT_Control_DW.TTController_DSTATE[23];
+    xnew[22] += (0.29195349394530024)*rtb_Sum1[5];
+    xnew[23] = (0.0021799853932918663)*TT_Control_DW.TTController_DSTATE[21]
+      + (-0.58517838698421143)*TT_Control_DW.TTController_DSTATE[22]
+      + (0.44848270092026393)*TT_Control_DW.TTController_DSTATE[23];
+    xnew[23] += (-0.27355876196458428)*rtb_Sum1[5];
+    xnew[24] = (1.0000000000000002)*TT_Control_DW.TTController_DSTATE[24];
+    xnew[24] += (-6.6619717846840878)*rtb_Sum1[6];
+    xnew[25] = (0.99529000600032735)*TT_Control_DW.TTController_DSTATE[25]
+      + (0.0023265423933003264)*TT_Control_DW.TTController_DSTATE[26]
+      + (0.0021799853932924335)*TT_Control_DW.TTController_DSTATE[27];
+    xnew[25] += (1.1851139548453302)*rtb_Sum1[6];
+    xnew[26] = (-0.0023265423933001412)*TT_Control_DW.TTController_DSTATE[25]
+      + (-0.37909734470795464)*TT_Control_DW.TTController_DSTATE[26]
+      + (0.58517838698532576)*TT_Control_DW.TTController_DSTATE[27];
+    xnew[26] += (0.29195349394530024)*rtb_Sum1[6];
+    xnew[27] = (0.0021799853932918663)*TT_Control_DW.TTController_DSTATE[25]
+      + (-0.58517838698421143)*TT_Control_DW.TTController_DSTATE[26]
+      + (0.44848270092026393)*TT_Control_DW.TTController_DSTATE[27];
+    xnew[27] += (-0.27355876196458428)*rtb_Sum1[6];
+    xnew[28] = (1.0000000000000002)*TT_Control_DW.TTController_DSTATE[28];
+    xnew[28] += (-6.6619717846840878)*rtb_Sum1[7];
+    xnew[29] = (0.99529000600032735)*TT_Control_DW.TTController_DSTATE[29]
+      + (0.0023265423933003264)*TT_Control_DW.TTController_DSTATE[30]
+      + (0.0021799853932924335)*TT_Control_DW.TTController_DSTATE[31];
+    xnew[29] += (1.1851139548453302)*rtb_Sum1[7];
+    xnew[30] = (-0.0023265423933001412)*TT_Control_DW.TTController_DSTATE[29]
+      + (-0.37909734470795464)*TT_Control_DW.TTController_DSTATE[30]
+      + (0.58517838698532576)*TT_Control_DW.TTController_DSTATE[31];
+    xnew[30] += (0.29195349394530024)*rtb_Sum1[7];
+    xnew[31] = (0.0021799853932918663)*TT_Control_DW.TTController_DSTATE[29]
+      + (-0.58517838698421143)*TT_Control_DW.TTController_DSTATE[30]
+      + (0.44848270092026393)*TT_Control_DW.TTController_DSTATE[31];
+    xnew[31] += (-0.27355876196458428)*rtb_Sum1[7];
+    xnew[32] = (1.0000000000000002)*TT_Control_DW.TTController_DSTATE[32];
+    xnew[32] += (-6.6619717846840878)*rtb_Sum1[8];
+    xnew[33] = (0.99529000600032735)*TT_Control_DW.TTController_DSTATE[33]
+      + (0.0023265423933003264)*TT_Control_DW.TTController_DSTATE[34]
+      + (0.0021799853932924335)*TT_Control_DW.TTController_DSTATE[35];
+    xnew[33] += (1.1851139548453302)*rtb_Sum1[8];
+    xnew[34] = (-0.0023265423933001412)*TT_Control_DW.TTController_DSTATE[33]
+      + (-0.37909734470795464)*TT_Control_DW.TTController_DSTATE[34]
+      + (0.58517838698532576)*TT_Control_DW.TTController_DSTATE[35];
+    xnew[34] += (0.29195349394530024)*rtb_Sum1[8];
+    xnew[35] = (0.0021799853932918663)*TT_Control_DW.TTController_DSTATE[33]
+      + (-0.58517838698421143)*TT_Control_DW.TTController_DSTATE[34]
+      + (0.44848270092026393)*TT_Control_DW.TTController_DSTATE[35];
+    xnew[35] += (-0.27355876196458428)*rtb_Sum1[8];
+    xnew[36] = (1.0000000000000002)*TT_Control_DW.TTController_DSTATE[36];
+    xnew[36] += (-6.6619717846840878)*rtb_Sum1[9];
+    xnew[37] = (0.99529000600032735)*TT_Control_DW.TTController_DSTATE[37]
+      + (0.0023265423933003264)*TT_Control_DW.TTController_DSTATE[38]
+      + (0.0021799853932924335)*TT_Control_DW.TTController_DSTATE[39];
+    xnew[37] += (1.1851139548453302)*rtb_Sum1[9];
+    xnew[38] = (-0.0023265423933001412)*TT_Control_DW.TTController_DSTATE[37]
+      + (-0.37909734470795464)*TT_Control_DW.TTController_DSTATE[38]
+      + (0.58517838698532576)*TT_Control_DW.TTController_DSTATE[39];
+    xnew[38] += (0.29195349394530024)*rtb_Sum1[9];
+    xnew[39] = (0.0021799853932918663)*TT_Control_DW.TTController_DSTATE[37]
+      + (-0.58517838698421143)*TT_Control_DW.TTController_DSTATE[38]
+      + (0.44848270092026393)*TT_Control_DW.TTController_DSTATE[39];
+    xnew[39] += (-0.27355876196458428)*rtb_Sum1[9];
+    xnew[40] = (1.0000000000000002)*TT_Control_DW.TTController_DSTATE[40];
+    xnew[40] += (-6.6619717846840878)*rtb_Sum1[10];
+    xnew[41] = (0.99529000600032735)*TT_Control_DW.TTController_DSTATE[41]
+      + (0.0023265423933003264)*TT_Control_DW.TTController_DSTATE[42]
+      + (0.0021799853932924335)*TT_Control_DW.TTController_DSTATE[43];
+    xnew[41] += (1.1851139548453302)*rtb_Sum1[10];
+    xnew[42] = (-0.0023265423933001412)*TT_Control_DW.TTController_DSTATE[41]
+      + (-0.37909734470795464)*TT_Control_DW.TTController_DSTATE[42]
+      + (0.58517838698532576)*TT_Control_DW.TTController_DSTATE[43];
+    xnew[42] += (0.29195349394530024)*rtb_Sum1[10];
+    xnew[43] = (0.0021799853932918663)*TT_Control_DW.TTController_DSTATE[41]
+      + (-0.58517838698421143)*TT_Control_DW.TTController_DSTATE[42]
+      + (0.44848270092026393)*TT_Control_DW.TTController_DSTATE[43];
+    xnew[43] += (-0.27355876196458428)*rtb_Sum1[10];
+    xnew[44] = (1.0000000000000002)*TT_Control_DW.TTController_DSTATE[44];
+    xnew[44] += (-6.6619717846840878)*rtb_Sum1[11];
+    xnew[45] = (0.99529000600032735)*TT_Control_DW.TTController_DSTATE[45]
+      + (0.0023265423933003264)*TT_Control_DW.TTController_DSTATE[46]
+      + (0.0021799853932924335)*TT_Control_DW.TTController_DSTATE[47];
+    xnew[45] += (1.1851139548453302)*rtb_Sum1[11];
+    xnew[46] = (-0.0023265423933001412)*TT_Control_DW.TTController_DSTATE[45]
+      + (-0.37909734470795464)*TT_Control_DW.TTController_DSTATE[46]
+      + (0.58517838698532576)*TT_Control_DW.TTController_DSTATE[47];
+    xnew[46] += (0.29195349394530024)*rtb_Sum1[11];
+    xnew[47] = (0.0021799853932918663)*TT_Control_DW.TTController_DSTATE[45]
+      + (-0.58517838698421143)*TT_Control_DW.TTController_DSTATE[46]
+      + (0.44848270092026393)*TT_Control_DW.TTController_DSTATE[47];
+    xnew[47] += (-0.27355876196458428)*rtb_Sum1[11];
+    xnew[48] = (1.0000000000000002)*TT_Control_DW.TTController_DSTATE[48];
+    xnew[48] += (-6.6619717846840878)*rtb_Sum1[12];
+    xnew[49] = (0.99529000600032735)*TT_Control_DW.TTController_DSTATE[49]
+      + (0.0023265423933003264)*TT_Control_DW.TTController_DSTATE[50]
+      + (0.0021799853932924335)*TT_Control_DW.TTController_DSTATE[51];
+    xnew[49] += (1.1851139548453302)*rtb_Sum1[12];
+    xnew[50] = (-0.0023265423933001412)*TT_Control_DW.TTController_DSTATE[49]
+      + (-0.37909734470795464)*TT_Control_DW.TTController_DSTATE[50]
+      + (0.58517838698532576)*TT_Control_DW.TTController_DSTATE[51];
+    xnew[50] += (0.29195349394530024)*rtb_Sum1[12];
+    xnew[51] = (0.0021799853932918663)*TT_Control_DW.TTController_DSTATE[49]
+      + (-0.58517838698421143)*TT_Control_DW.TTController_DSTATE[50]
+      + (0.44848270092026393)*TT_Control_DW.TTController_DSTATE[51];
+    xnew[51] += (-0.27355876196458428)*rtb_Sum1[12];
+    xnew[52] = (1.0000000000000002)*TT_Control_DW.TTController_DSTATE[52];
+    xnew[52] += (-6.6619717846840878)*rtb_Sum1[13];
+    xnew[53] = (0.99529000600032735)*TT_Control_DW.TTController_DSTATE[53]
+      + (0.0023265423933003264)*TT_Control_DW.TTController_DSTATE[54]
+      + (0.0021799853932924335)*TT_Control_DW.TTController_DSTATE[55];
+    xnew[53] += (1.1851139548453302)*rtb_Sum1[13];
+    xnew[54] = (-0.0023265423933001412)*TT_Control_DW.TTController_DSTATE[53]
+      + (-0.37909734470795464)*TT_Control_DW.TTController_DSTATE[54]
+      + (0.58517838698532576)*TT_Control_DW.TTController_DSTATE[55];
+    xnew[54] += (0.29195349394530024)*rtb_Sum1[13];
+    xnew[55] = (0.0021799853932918663)*TT_Control_DW.TTController_DSTATE[53]
+      + (-0.58517838698421143)*TT_Control_DW.TTController_DSTATE[54]
+      + (0.44848270092026393)*TT_Control_DW.TTController_DSTATE[55];
+    xnew[55] += (-0.27355876196458428)*rtb_Sum1[13];
     (void) memcpy(&TT_Control_DW.TTController_DSTATE[0], xnew,
-                  sizeof(real_T)*14);
+                  sizeof(real_T)*56);
   }
 }
 
@@ -148,7 +372,7 @@ void TT_Control_initialize(void)
   (void)memset(&TT_Control_U, 0, sizeof(ExtU_TT_Control_T));
 
   /* external outputs */
-  (void) memset(&TT_Control_Y.FSM_cmd[0], 0,
+  (void) memset(&TT_Control_Y.FZT_cmd[0], 0,
                 21U*sizeof(real_T));
 }
 
