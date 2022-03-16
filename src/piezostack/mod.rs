@@ -8,9 +8,9 @@ r##"
  *
  * Code generated for Simulink model 'M2_PZT_Control'.
  *
- * Model version                  : 1.900
+ * Model version                  : 1.1033
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Tue Aug 24 14:24:24 2021
+ * C/C++ source code generated on : Wed Mar 16 13:49:23 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -40,13 +40,13 @@ r##"
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
-  real_T DiscreteSS_DSTATE[15];        /* '<S12>/Discrete SS' */
+  real_T DiscreteSS_DSTATE[14];        /* '<S12>/Discrete SS' */
   real_T DiscreteSS_DSTATE_a[20];      /* '<S13>/Discrete SS' */
-  real_T DiscreteSS_DSTATE_j[15];      /* '<S14>/Discrete SS' */
+  real_T DiscreteSS_DSTATE_j[14];      /* '<S14>/Discrete SS' */
   real_T DiscreteSS_DSTATE_af[20];     /* '<S15>/Discrete SS' */
-  real_T DiscreteSS_DSTATE_c[15];      /* '<S16>/Discrete SS' */
+  real_T DiscreteSS_DSTATE_c[14];      /* '<S16>/Discrete SS' */
   real_T DiscreteSS_DSTATE_l[20];      /* '<S17>/Discrete SS' */
-  real_T DiscreteSS_DSTATE_jv[9];      /* '<S18>/Discrete SS' */
+  real_T DiscreteSS_DSTATE_jv[12];     /* '<S18>/Discrete SS' */
 } DW_M2_PZT_Control_T;
 
 /* Constant parameters (default storage) */
@@ -69,7 +69,15 @@ typedef struct {
    *   '<S14>/Discrete SS'
    *   '<S16>/Discrete SS'
    */
-  real_T pooled4[15];
+  real_T pooled2[46];
+
+  /* Pooled Parameter (Expression: )
+   * Referenced by:
+   *   '<S12>/Discrete SS'
+   *   '<S14>/Discrete SS'
+   *   '<S16>/Discrete SS'
+   */
+  real_T pooled4[14];
 
   /* Pooled Parameter (Expression: kron(eye(3),[-1;1]))
    * Referenced by:
@@ -89,12 +97,20 @@ typedef struct {
    *   '<S15>/Discrete SS'
    *   '<S17>/Discrete SS'
    */
-  real_T pooled10[15];
+  real_T pooled8[72];
+
+  /* Pooled Parameter (Expression: )
+   * Referenced by:
+   *   '<S13>/Discrete SS'
+   *   '<S15>/Discrete SS'
+   *   '<S17>/Discrete SS'
+   */
+  real_T pooled10[14];
 } ConstP_M2_PZT_Control_T;
 
 /* External inputs (root inport signals with default storage) */
 typedef struct {
-  real_T TT_cmd[21];                   /* '<Root>/TT_cmd' */
+  real_T PZT_cmd[21];                  /* '<Root>/PZT_cmd' */
   real_T PZT_FB[42];                   /* '<Root>/PZT_FB' */
 } ExtU_M2_PZT_Control_T;
 
@@ -161,30 +177,30 @@ extern RT_MODEL_M2_PZT_Control_T *const M2_PZT_Control_M;
  * MATLAB hilite_system command to trace the generated code back
  * to the parent model.  For example,
  *
- * hilite_system('ims_Build5pt1e/M2_PZT_Control')    - opens subsystem ims_Build5pt1e/M2_PZT_Control
- * hilite_system('ims_Build5pt1e/M2_PZT_Control/Kp') - opens and selects block Kp
+ * hilite_system('ims_Build5pt1f/M2_PZT_Control')    - opens subsystem ims_Build5pt1f/M2_PZT_Control
+ * hilite_system('ims_Build5pt1f/M2_PZT_Control/Kp') - opens and selects block Kp
  *
  * Here is the system hierarchy for this model
  *
- * '<Root>' : 'ims_Build5pt1e'
- * '<S1>'   : 'ims_Build5pt1e/M2_PZT_Control'
- * '<S2>'   : 'ims_Build5pt1e/M2_PZT_Control/PZT Selector'
- * '<S3>'   : 'ims_Build5pt1e/M2_PZT_Control/PZT selector'
- * '<S4>'   : 'ims_Build5pt1e/M2_PZT_Control/PZT selector1'
- * '<S5>'   : 'ims_Build5pt1e/M2_PZT_Control/PZT_Control_FSM1'
- * '<S6>'   : 'ims_Build5pt1e/M2_PZT_Control/PZT_Control_FSM2'
- * '<S7>'   : 'ims_Build5pt1e/M2_PZT_Control/PZT_Control_FSM3'
- * '<S8>'   : 'ims_Build5pt1e/M2_PZT_Control/PZT_Control_FSM4'
- * '<S9>'   : 'ims_Build5pt1e/M2_PZT_Control/PZT_Control_FSM5'
- * '<S10>'  : 'ims_Build5pt1e/M2_PZT_Control/PZT_Control_FSM6'
- * '<S11>'  : 'ims_Build5pt1e/M2_PZT_Control/PZT_Control_FSM7'
- * '<S12>'  : 'ims_Build5pt1e/M2_PZT_Control/PZT_Control_FSM1/multi-rate SS'
- * '<S13>'  : 'ims_Build5pt1e/M2_PZT_Control/PZT_Control_FSM2/multi-rate SS'
- * '<S14>'  : 'ims_Build5pt1e/M2_PZT_Control/PZT_Control_FSM3/multi-rate SS'
- * '<S15>'  : 'ims_Build5pt1e/M2_PZT_Control/PZT_Control_FSM4/multi-rate SS'
- * '<S16>'  : 'ims_Build5pt1e/M2_PZT_Control/PZT_Control_FSM5/multi-rate SS'
- * '<S17>'  : 'ims_Build5pt1e/M2_PZT_Control/PZT_Control_FSM6/multi-rate SS'
- * '<S18>'  : 'ims_Build5pt1e/M2_PZT_Control/PZT_Control_FSM7/multi-rate SS'
+ * '<Root>' : 'ims_Build5pt1f'
+ * '<S1>'   : 'ims_Build5pt1f/M2_PZT_Control'
+ * '<S2>'   : 'ims_Build5pt1f/M2_PZT_Control/PZT Selector'
+ * '<S3>'   : 'ims_Build5pt1f/M2_PZT_Control/PZT selector'
+ * '<S4>'   : 'ims_Build5pt1f/M2_PZT_Control/PZT selector1'
+ * '<S5>'   : 'ims_Build5pt1f/M2_PZT_Control/PZT_Control_FSM1'
+ * '<S6>'   : 'ims_Build5pt1f/M2_PZT_Control/PZT_Control_FSM2'
+ * '<S7>'   : 'ims_Build5pt1f/M2_PZT_Control/PZT_Control_FSM3'
+ * '<S8>'   : 'ims_Build5pt1f/M2_PZT_Control/PZT_Control_FSM4'
+ * '<S9>'   : 'ims_Build5pt1f/M2_PZT_Control/PZT_Control_FSM5'
+ * '<S10>'  : 'ims_Build5pt1f/M2_PZT_Control/PZT_Control_FSM6'
+ * '<S11>'  : 'ims_Build5pt1f/M2_PZT_Control/PZT_Control_FSM7'
+ * '<S12>'  : 'ims_Build5pt1f/M2_PZT_Control/PZT_Control_FSM1/multi-rate SS'
+ * '<S13>'  : 'ims_Build5pt1f/M2_PZT_Control/PZT_Control_FSM2/multi-rate SS'
+ * '<S14>'  : 'ims_Build5pt1f/M2_PZT_Control/PZT_Control_FSM3/multi-rate SS'
+ * '<S15>'  : 'ims_Build5pt1f/M2_PZT_Control/PZT_Control_FSM4/multi-rate SS'
+ * '<S16>'  : 'ims_Build5pt1f/M2_PZT_Control/PZT_Control_FSM5/multi-rate SS'
+ * '<S17>'  : 'ims_Build5pt1f/M2_PZT_Control/PZT_Control_FSM6/multi-rate SS'
+ * '<S18>'  : 'ims_Build5pt1f/M2_PZT_Control/PZT_Control_FSM7/multi-rate SS'
  */
 #endif                                 /* RTW_HEADER_M2_PZT_Control_h_ */
 
