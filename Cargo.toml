@@ -1,9 +1,16 @@
 [package]
-name = "fsm"
+name = "m2-ctrl"
 version = "0.1.0"
+authors = ["Rod Conan <rconan@gmto.org>"]
 edition = "2021"
+license = "MIT"
+description = "Giant Magellan Telescope secondary mirror control system"
+repository = "https://github.com/rconan/m2-ctrl"
+documentation = "https://docs.rs/m2-ctrl"
+readme = "README.md"
+categories = ["science", "simulation"]
+keywords = ["telescope", "astronomy"]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 paste = "1.0.6"
