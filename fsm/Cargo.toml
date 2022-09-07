@@ -1,0 +1,11 @@
+[package]
+name = "fsm"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+paste = "1.0.6"
+simulink-binder = "0.1.1"
+
+[build-dependencies]
+cc = "1.0.73"

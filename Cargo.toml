@@ -1,6 +1,6 @@
 [package]
 name = "m2-ctrl"
-version = "0.1.0"
+version = "1.0.0"
 authors = ["Rod Conan <rconan@gmto.org>"]
 edition = "2021"
 license = "MIT"
@@ -11,10 +11,9 @@ readme = "README.md"
 categories = ["science", "simulation"]
 keywords = ["telescope", "astronomy"]
 
+[workspace]
+members = ["fsm", "asm"]
 
 [dependencies]
-paste = "1.0.6"
-simulink-binder = "0.1.1"
-
-[build-dependencies]
-cc = "1.0.73"
+fsm = { path = "fsm", optional = true }
+asm = { path = "asm", optional = true }
