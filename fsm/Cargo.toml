@@ -2,6 +2,13 @@
 name = "m2-ctrl_fsm"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+description = "Giant Magellan Telescope secondary mirror control system (FSM)"
+repository = "https://github.com/rconan/m2-ctrl"
+documentation = "https://docs.rs/m2-ctrl_fsm"
+readme = "README.md"
+categories = ["science", "simulation"]
+keywords = ["telescope", "astronomy"]
 
 [dependencies]
 paste = "1.0.6"

@@ -2,8 +2,13 @@
 name = "m2-ctrl_asm"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+license = "MIT"
+description = "Giant Magellan Telescope secondary mirror control system (ASM)"
+repository = "https://github.com/rconan/m2-ctrl"
+documentation = "https://docs.rs/m2-ctrl_asm"
+readme = "README.md"
+categories = ["science", "simulation"]
+keywords = ["telescope", "astronomy"]
 
 [dependencies]
 paste = "1.0.6"
