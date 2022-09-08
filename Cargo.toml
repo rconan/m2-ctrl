@@ -15,5 +15,5 @@ keywords = ["telescope", "astronomy"]
 members = ["fsm", "asm"]
 
 [dependencies]
-fsm = { path = "fsm", optional = true }
-asm = { path = "asm", optional = true }
+fsm = { version = "0.1.0", package = "m2-ctrl_fsm", path = "fsm", optional = true }
+asm = { version = "0.1.0", package = "m2-ctrl_asm", path = "asm", optional = true }
