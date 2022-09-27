@@ -1,5 +1,7 @@
 pub mod positionner;
 pub mod ptt_fluid_damping;
+mod actors_interface;
+use actors_interface::*;
 
 #[cfg(test)]
 mod tests {

@@ -1,3 +1,5 @@
+mod actors_interface;
+use actors_interface::*;
 pub mod piezostack;
 pub mod positionner;
 pub mod tiptilt;

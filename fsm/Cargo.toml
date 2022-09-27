@@ -11,8 +11,11 @@ categories = ["science", "simulation"]
 keywords = ["telescope", "astronomy"]
 
 [dependencies]
-paste = "1.0.6"
-simulink-binder = "0.1.1"
+paste = { workspace = true }
+simulink-binder = { workspace = true }
+dos-actors = { workspace = true }
+log = { workspace = true }
+fem = { workspace = true, optional = true }
 
 [build-dependencies]
-cc = "1.0.73"
+cc = { workspace = true }
