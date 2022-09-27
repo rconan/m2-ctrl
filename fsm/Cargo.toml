@@ -15,7 +15,7 @@ paste = { workspace = true }
 simulink-binder = { workspace = true }
 dos-actors = { workspace = true }
 log = { workspace = true }
-fem = { workspace = true, optional = true }
+fem = { workspace = true, default-features = false, optional = true }
 
 [build-dependencies]
 cc = { workspace = true }
