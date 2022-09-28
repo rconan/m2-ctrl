@@ -51,12 +51,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "anyhow"
-version = "1.0.65"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "98161a4e3e2184da77bb14f02184cdd111e83bbbcc9979dfee3c44b9a85f5602"
-
-[[package]]
 name = "approx"
 version = "0.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -539,15 +533,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3237277dbaf611664120f4f1267531d01ec3883c98018de26941e8918b24874f"
 
 [[package]]
-name = "geotrans"
-version = "0.2.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5d791e216517eb08f3717cc87af4134a23d824eda5dee14e05c6846d2491b97a"
-dependencies = [
- "thiserror",
-]
-
-[[package]]
 name = "getrandom"
 version = "0.2.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -561,12 +546,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "glob"
-version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9b919933a397b79c37e33b77bb2aa3dc8eb6e165ad809e58ff75bc7db2e34574"
-
-[[package]]
 name = "gmt-fem"
 version = "0.3.0"
 dependencies = [
@@ -575,7 +554,7 @@ dependencies = [
  "dos-uid-derive 0.3.1",
  "env_logger",
  "fem-macros",
- "geotrans 0.1.1",
+ "geotrans",
  "gmt_dos-actors",
  "log",
  "nalgebra",
@@ -591,23 +570,14 @@ dependencies = [
 name = "gmt_dos-actors"
 version = "3.0.1"
 dependencies = [
- "anyhow",
  "async-trait",
- "bincode",
  "chrono",
  "dos-uid-derive 0.3.2",
  "flume",
  "futures",
- "geotrans 0.2.2",
- "glob",
  "humantime",
  "linya",
  "log",
- "paste",
- "quote",
- "serde",
- "skyangle",
- "syn",
  "thiserror",
  "tokio",
 ]
@@ -1414,12 +1384,6 @@ dependencies = [
  "regex",
  "syn",
 ]
-
-[[package]]
-name = "skyangle"
-version = "0.1.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "14f0f0e12026f389b18e71af142c337bccab8a569f44853460ace72bea066544"
 
 [[package]]
 name = "slab"

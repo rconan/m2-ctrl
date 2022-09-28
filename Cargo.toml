@@ -21,7 +21,7 @@ asm = { version = "0.1.0", package = "m2-ctrl_asm", path = "asm", optional = tru
 [workspace.dependencies]
 paste = "1.0.6"
 simulink-binder = "0.1.1"
-dos-actors = { version = "3.0.1", package = "gmt_dos-actors", path = "../dos-actors" }
+dos-actors = { version = "3.0.1", package = "gmt_dos-actors", path = "../dos-actors", default-features = false }
 log = "0.4.17"
 cc = "1.0.73"
 fem = { version = "0.3.0", path = "../fem", package = "gmt-fem" }
