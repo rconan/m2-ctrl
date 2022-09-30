@@ -44,6 +44,9 @@ use dos_actors::{
     io::{Data, Read, UniqueIdentifier, Write},
     Update, UID,
 };
+use dos_clients_io::{
+    M2FSMPiezoForces, M2FSMPiezoNodes, M2FSMTipTilt, M2PositionerForces, M2PositionerNodes,
+};
 use std::{ptr, sync::Arc};
 
 /// positionner input
@@ -74,19 +77,16 @@ pub enum TTFB {}
 impl_update! {positionner}
 impl_read! {positionner, (M2poscmd, m2_pos_cmd), (M2posFB, m2_pos_fb)}
 impl_write! {positionner, (M2posactF,m2_pos_act_f)}
-#[cfg(feature = "fem")]
-impl_write! {fem::fem_io::MCM2SmHexF, positionner, (M2posactF,m2_pos_act_f)}
-#[cfg(feature = "fem")]
-impl_read! {fem::fem_io::MCM2SmHexD,positionner, (M2posFB, m2_pos_fb)}
+impl_write! {M2PositionerForces, positionner, (M2posactF,m2_pos_act_f)}
+impl_read! {M2PositionerNodes,positionner, (M2posFB, m2_pos_fb)}
 
 impl_update! {piezostack}
 impl_read! {piezostack, (PZTcmd, pzt_cmd), (PZTFB, pzt_fb)}
 impl_write! {piezostack, (PZTF, pzt_f)}
-#[cfg(feature = "fem")]
-impl_read! {fem::fem_io::MCM2PZTD, piezostack, (PZTFB, pzt_fb)}
-#[cfg(feature = "fem")]
-impl_write! {fem::fem_io::MCM2PZTF,piezostack, (PZTF, pzt_f)}
+impl_read! {M2FSMPiezoNodes, piezostack, (PZTFB, pzt_fb)}
+impl_write! {M2FSMPiezoForces,piezostack, (PZTF, pzt_f)}
 
 impl_update! {tiptilt}
 impl_read! {tiptilt, (TTSP, tt_sp), (TTFB, tt_fb)}
+impl_read! {M2FSMTipTilt, tiptilt, (TTFB, tt_fb)}
 impl_write! {tiptilt, (PZTcmd, pzt_cmd)}

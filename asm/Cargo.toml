@@ -14,11 +14,8 @@ keywords = ["telescope", "astronomy"]
 paste = { workspace = true }
 simulink-binder = { workspace = true }
 dos-actors = { workspace = true }
+dos-clients_io = { workspace = true }
 log = { workspace = true }
-fem = { workspace = true, default-features = false, optional = true }
-
-[features]
-default = ["fem"]
 
 [build-dependencies]
 cc = { workspace = true }

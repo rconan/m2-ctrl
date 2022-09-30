@@ -10,6 +10,10 @@ use dos_actors::{
 };
 
 use super::{positionner, ptt_fluid_damping};
+use dos_clients_io::{
+    M2ASMColdPlateForces, M2ASMFaceSheetForces, M2ASMFaceSheetNodes, M2ASMRigidBodyForces,
+    M2ASMRigidBodyNodes, M2PositionerForces, M2PositionerNodes,
+};
 use std::{ptr, sync::Arc};
 
 /// positionner input
@@ -43,23 +47,19 @@ pub enum Ufs {}
 impl_update! {positionner}
 impl_read! {positionner, (M2poscmd, m2_pos_cmd), (M2posFB, m2_pos_fb)}
 impl_write! {positionner, (M2posactF,m2_pos_act_f)}
-#[cfg(feature = "fem")]
-impl_write! {positionner, (fem::fem_io::MCM2SmHexF, M2posactF,m2_pos_act_f)}
-#[cfg(feature = "fem")]
-impl_read! {positionner, (fem::fem_io::MCM2SmHexD, M2posFB, m2_pos_fb)}
+impl_write! {positionner, (M2PositionerForces, M2posactF,m2_pos_act_f)}
+impl_read! {positionner, (M2PositionerNodes, M2posFB, m2_pos_fb)}
 
 impl_update! {ptt_fluid_damping}
 impl_read! {ptt_fluid_damping, (Rrbfs, rrbfs), (ASMFS6D, asm_fs_6d), (ASMRB6D, asm_rb_6d)}
 impl_write! {ptt_fluid_damping, (Ucp,ucp), (Urb,urb), (Ufs,ufs)}
-#[cfg(feature = "fem")]
 impl_write! {ptt_fluid_damping,
-(fem::fem_io::MCM2CP6F, Ucp, ucp),
-(fem::fem_io::MCM2RB6F, Urb, urb),
-(fem::fem_io::MCM2Lcl6F, Ufs, ufs)}
-#[cfg(feature = "fem")]
+(M2ASMColdPlateForces, Ucp, ucp),
+(M2ASMRigidBodyForces, Urb, urb),
+(M2ASMFaceSheetForces, Ufs, ufs)}
 impl_read! {ptt_fluid_damping,
-(fem::fem_io::MCM2Lcl6D, ASMFS6D, asm_fs_6d),
-(fem::fem_io::MCM2RB6D, ASMRB6D, asm_rb_6d)}
+(M2ASMFaceSheetNodes, ASMFS6D, asm_fs_6d),
+(M2ASMRigidBodyNodes, ASMRB6D, asm_rb_6d)}
 
 #[cfg(test)]
 mod tests {

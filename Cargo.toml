@@ -22,9 +22,9 @@ asm = { version = "0.1.0", package = "m2-ctrl_asm", path = "asm", optional = tru
 paste = "1.0.6"
 simulink-binder = "0.1.1"
 dos-actors = { version = "3.0.1", package = "gmt_dos-actors", path = "../dos-actors", default-features = false }
+dos-clients_io = { version = "0.1.0", path = "../dos-actors/clients/io", package = "gmt_dos-clients_io" }
 log = "0.4.17"
 cc = "1.0.73"
-fem = { version = "0.3.0", path = "../fem", package = "gmt-fem" }
 
 [package.metadata.docs.rs]
 features = ["fsm"]
